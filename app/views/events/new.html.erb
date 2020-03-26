@@ -1,0 +1,13 @@
+<% provide(:title, 'New Event') %>
+<%= form_for(@event) do |f| %>
+ 
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :datetime %>
+  <%= f.date_field :datetime %><br>
+
+  <%= f.submit %>
+
+<% end %>
+
