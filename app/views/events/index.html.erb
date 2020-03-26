@@ -1,5 +1,5 @@
 <% provide(:title, 'All Events') %>
-
+<%= render "application/header" %>
 <h1>Listing events/h1>
 
 <table>
@@ -13,8 +13,9 @@
 
 <% @event.each do |event| %>
   <tr>
-    <td><%= event.name %></td>
-    <td><%= event.datetime %></td>
+    <td>name: <%= event.name %></td>
+    <td>date: <%= event.datetime %></td>
+    <td>available tickets: <%= event.tickets %></td>
   
     <%# <td><%= link_to 'Destroy', user, method: :delete,
                                      data: { confirm: 'Are you sure?' } %>
