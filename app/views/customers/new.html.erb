@@ -1,0 +1,14 @@
+<% provide(:title, 'New Customer') %>
+<%= render "application/header" %>
+<%= form_for(@customer) do |f| %>
+ 
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %><br>
+
+  <%= f.submit %>
+
+<% end %>
+

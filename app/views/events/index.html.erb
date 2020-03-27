@@ -1,21 +1,27 @@
 <% provide(:title, 'All Events') %>
 <%= render "application/header" %>
-<h1>Listing events/h1>
+<h1>Listing events</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Email</th>
+      <th>Fecha</th>
+      <th>Num de clientes</th>
+      <th>Num de boletas</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
 
 <% @event.each do |event| %>
   <tr>
-    <td>name: <%= event.name %></td>
-    <td>date: <%= event.datetime %></td>
-    <td>available tickets: <%= event.tickets %></td>
+    <td><%= link_to "#{event.name}", event%></td>
+    <td><%= event.datetime %></td>
+    <td><%= event.customers.count %></td>
+    <td><%= event.tickets %></td>
+    
+    
   
     <%# <td><%= link_to 'Destroy', user, method: :delete,
                                      data: { confirm: 'Are you sure?' } %>
@@ -27,6 +33,4 @@
 
 <%= link_to 'New Event', new_event_path %>
 
-
-    <%# <td><%= link_to 'Show', user</td> %> %>
-      <%# <td><%= link_to 'Edit', edit_user_path(user) %>
+     

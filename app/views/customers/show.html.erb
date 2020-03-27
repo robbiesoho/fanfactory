@@ -1,0 +1,16 @@
+<% provide(:title, @customer.name) %>
+<%= render "application/header" %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @customer.name %><br>
+        <%= @customer.email %>
+     
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
+         <%# <td><%= link_to 'Edit', edit_user_path(user) %>
