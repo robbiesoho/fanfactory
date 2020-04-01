@@ -7,6 +7,12 @@
         <%= @event.name %>
      
       </h1>
+
+      <h3>customers: (<%= @event.customers.count %>)</h3>
+      <ul>
+      <% @event.customers.each do |cus| %>
+        <li><%= cus.name %></li><br>
+      <%end%>
     </section>
   </aside>
 </div>
