@@ -6,6 +6,14 @@
       <h1>
         <%= @customer.name %><br>
         <%= @customer.email %>
+        <h3>Events: (<%= @customer.events.count %>)</h3>
+      <ul>
+      <% @customer.events.each do |event| %>
+        <li><%= event.name %></li><br>
+        <li><%= event.location %></li><br>
+        <li><%= event.datetime %></li><br>
+        <hr>
+      <%end%>
      
       </h1>
     </section>

@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  # before_action :logged_in_user, except: [:new]
+
   def new
   end
 
@@ -16,5 +18,10 @@ class SessionsController < ApplicationController
   def destroy
     log_out
     redirect_to root_url
+  end
+
+  # Returns true if the given user is the current user.
+  def current_user?(user)
+    user == current_user
   end
 end
