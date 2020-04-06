@@ -1,0 +1,11 @@
+<% @user.event.each do |event| %>
+  <tr>
+    <td><%= link_to "#{event.name}", event%></td>
+    <td><%= event.datetime %></td>
+    <td><%= event.customers.count %></td>
+    <td><%= event.tickets %></td>
+    
+    
+  
+  </tr>
+<% end %>
