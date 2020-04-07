@@ -3,19 +3,20 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        <%= @event.name %>
-     
-      </h1>
+      <h1><%= @event.name %></h1>
+      <h2><%= @event.datetime %></h2>
 
       <h3>customers: (<%= @event.customers.count %>)</h3>
       <ul>
       <% @event.customers.each do |cus| %>
-        <li><%= cus.name %></li><br>
+        <li><%= cus.name %></li>
+        <li>email</li>
+        <li>phonenumber</li><br>
       <%end%>
     </section>
   </aside>
 </div>
+ <td><%= link_to 'Add Customer', add_event_path(@event) %>
 
 
          <%# <td><%= link_to 'Edit', edit_user_path(user) %>

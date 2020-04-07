@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @event = Event.all
+    @upcoming_events = Event.all.upcoming
+    @previous_events = Event.all.previous
   end
 
   def new
@@ -23,6 +24,13 @@ class UsersController < ApplicationController
 
   def index
     
+  end
+
+  def destroy
+    #need to somehow implement this
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url
   end
 
 

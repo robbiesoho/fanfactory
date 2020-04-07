@@ -1,0 +1,13 @@
+
+
+<%= form_for(@event) do |f| %>
+  <%= hidden_field_tag "event[customer_ids][]", nil%>
+  <%= @customer.each do |customer| %>
+    <%= check_box_tag "event[customer_ids][]", customer.id,
+    @event.customer_ids.include?(customer.id), id:dom_id(customer) %>
+    <%= label_tag dom_id(customer), customer.name %><br>
+  <% end %>  
+  <br>
+    <%= f.submit%>
+<% end %>  
+
