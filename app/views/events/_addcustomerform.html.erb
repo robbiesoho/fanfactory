@@ -5,7 +5,11 @@
   <%= @customer.each do |customer| %>
     <%= check_box_tag "event[customer_ids][]", customer.id,
     @event.customer_ids.include?(customer.id), id:dom_id(customer) %>
-    <%= label_tag dom_id(customer), customer.name %><br>
+    <%= label_tag dom_id(customer), customer.id %>
+    <%= label_tag dom_id(customer), customer.name %> --
+    <%= label_tag dom_id(customer), customer.email %> --
+    <%= label_tag dom_id(customer), customer.phone %>
+    <br>
   <% end %>  
   <br>
     <%= f.submit%>

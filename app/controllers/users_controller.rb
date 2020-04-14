@@ -23,13 +23,13 @@ class UsersController < ApplicationController
   end
 
   def index
-    
+    @user = User.all
   end
 
   def destroy
     #need to somehow implement this
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+    flash[:success] = "Admin deleted"
     redirect_to users_url
   end
 

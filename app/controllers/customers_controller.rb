@@ -23,10 +23,17 @@ class CustomersController < ApplicationController
     end
   end
 
+  def destroy
+    Customer.find(params[:id]).destroy
+    flash[:success] = "Customer deleted"
+    redirect_to customers_url
+  end
+
+
   private
 
   def customer_params
-    params.require(:customer).permit(:name, :email)
+    params.require(:customer).permit(:name, :email, :phone)
   end
   
 end

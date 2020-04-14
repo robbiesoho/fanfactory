@@ -1,12 +1,26 @@
 <% provide(:title, 'New Event') %>
-<%= render "application/header" %>
+ <%= render 'application/header' %>
+<h1>New Event</h1>
 <%= form_for(@event) do |f| %>
  
-  <%= f.label :name %>
+  <%= f.label :nombre %>
   <%= f.text_field :name %><br>
 
-  <%= f.label :datetime %>
+  <%= f.label :ubicación %>
+  <%= f.text_field :location %><br>
+
+  <%= f.label :date %>
   <%= f.date_field :datetime %><br>
+
+  <%= f.label :time %>
+  <%= f.time_field :datetime %><br>
+
+  <%= f.label :entradas_disponibles %>
+  <%= f.number_field :tickets %><br>
+
+  <%= f.label :precio %>
+  <%= f.number_field :price, step: 0.5 %><br>
+  
 
   <%= f.submit %>
 

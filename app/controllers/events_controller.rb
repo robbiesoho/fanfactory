@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :logged_in_user
+  
 
   def index
     @upcoming_events = Event.all.upcoming
@@ -45,12 +46,17 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+    Event.find(params[:id]).destroy
+    flash[:success] = "Event deleted"
+    redirect_to events_url
+  end
 
 
   private
 
   def event_params
-    params.require(:event).permit(:name, :datetime, customer_ids:[])
+    params.require(:event).permit(:name, :datetime, :location, :tickets, :price, customer_ids:[])
   end
  
 end

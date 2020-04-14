@@ -1,31 +1,9 @@
-<%= render "application/header" %>
+ <%= render 'application/header' %>
 <h1> Welcome <%= @user.name %></h1>
-<h2> Upcoming events:</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Fecha</th>
-      <th>Num de clientes</th>
-      <th>Num de boletas</th>
-      
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <%# <%= link_to "delete", @user, method: :delete,
+                                       data: { confirm: "You sure?" } %>
 
-<% @upcoming_events.each do |event| %>
-  <tr>
-    <td><%= link_to "#{event.name}", event%></td>
-    <td><%= event.datetime %></td>
-    <td><%= event.customers.count %></td>
-    <td><%= event.tickets %></td>
-    
-    
-  
-  </tr>
-<% end %>
-</table>
-<%= link_to "All Events", events_path%>
-<%= link_to "New Event", new_event_path%><br>
 
-<%= render "application/footer" %>
+<%= render 'events/upcoming' %>
+
+

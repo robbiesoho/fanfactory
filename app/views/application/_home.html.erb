@@ -1,0 +1,30 @@
+
+<h1> Welcome <%= @user.name %></h1>
+<h2> Upcoming events:</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Ubitacion</th>
+      <th>Entradas Vendidas</th>
+      <th>Entradas Disponibles</th>
+      <th>Entradas Totales</th>
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+<% @upcoming_events.each do |event| %>
+  <tr>
+    <td><%= link_to "#{event.name}", event%></td>
+    <td><%= event.date_formatted %></td>
+    <td><%= event.time_formatted %></td>
+    <td><%= event.location %></td>
+    <td><%= event.customers.count %></td>
+    <td><%= event.available_tickets %></td>
+    <td><%= event.tickets %></td>
+  </tr>
+<% end %>
+</table>

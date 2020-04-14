@@ -1,0 +1,30 @@
+<h1>Past events: </h1>
+
+<table>
+ <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Ubitacion</th>
+      <th>Entradas Vendidas</th>
+      <th>Entradas Sin Vender</th>
+      <th>Entradas Totales</th>
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+<% @previous_events.each do |event| %>
+  <tr>
+    <td><%= link_to "#{event.name}", event%></td>
+    <td><%= event.date_formatted %></td>
+    <td><%= event.time_formatted %></td>
+    <td><%= event.location %></td>
+    <td><%= event.customer_count %></td>
+    <td><%= event.available_tickets %></td>
+    <td><%= event.tickets %></td>
+  </tr>
+<% end %>
+</table>
