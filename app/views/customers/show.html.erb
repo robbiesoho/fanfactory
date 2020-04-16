@@ -9,7 +9,7 @@
       <h1>Name: <%= @customer.name %></h1><br>
         <h2>Email: <%= @customer.email %></h2><br>
         <h2>Phone: <%= @customer.phone %></h2><br>
-        <h3><%= "Upcoming events for #{@customer.name}: count "%><%= @customer.events.upcoming.count %></h3>
+        <h3><%= "Upcoming events for #{@customer.name}: "%><%= @customer.events.upcoming.count %></h3>
 
         <table>
           <thead>
@@ -31,7 +31,7 @@
         </table>
 
         <br>
-        <h3><%= "Past events for #{@customer.name}: "%><%= @customer.events.count %></h3>
+        <h3><%= "Past events for #{@customer.name}: "%><%= @customer.events.previous.count %></h3>
         <table>
           <thead>
               <tr>
@@ -49,7 +49,8 @@
         </table>
      
      <br>
-    <%= link_to "delete customer", @customer, method: :delete,
+    <%= link_to "Delete Customer", @customer, method: :delete,
     data: { confirm: "Are you sure you want to delete #{@customer.name}?" } %>
+    <br>
 
 <%# <td><%= link_to 'Edit', edit_user_path(user) %>

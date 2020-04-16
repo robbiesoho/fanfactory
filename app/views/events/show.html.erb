@@ -1,51 +1,55 @@
 <% provide(:title, @event.name) %>
  <%= render 'application/header' %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1><%= @event.name %></h1>
-      <table>
-        <thead>
-        <tr>
-          <th>Ubitacion</th>
-          <th>Fecha</th>
-          <th>Hora</th>
-    
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-        <tr>
-          <td><%= @event.location %></td>
-          <td><%= @event.date_formatted %></td>
-          <td><%= @event.time_formatted %></td>
-        </tr>
-      </table>
+<div class = "pagehead">
+  <h1><%= @event.name %></h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Ubitacion</th>
+      <th>Fecha</th>
+      <th>Hora</th>
 
-      <h3>Clientes confirmados: (<%= @event.customer_count %>)</h3>
-      <table>
-      <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Numero de Tele</th>
-            
-            <th colspan="3"></th>
-          </tr>
-      </thead>
-      <% if @event.customers %>
-        <% @event.customers.each do |customer| %>
-          <tr>
-            <td><%= link_to "#{customer.id}", customer%></td>
-            <td><%= link_to "#{customer.name}", customer%></td>
-            <td><%= customer.email %></td>
-            <td><%= customer.phone %></td>
-          </tr>
-        <%end%>
-      <%end%>
-    </section>
-  </aside>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+    <tr>
+      <td><%= @event.location %></td>
+      <td><%= @event.date_formatted %></td>
+      <td><%= @event.time_formatted %></td>
+    </tr>
+  </table>
+  <%= link_to "Delete Event", @event, method: :delete,
+data: { confirm: "Are you sure you want to delete #{@event.name}?" } %>
+  </div>
+  <br>
+
+  <h3>Clientes confirmados: (<%= @event.customer_count %>)</h3>
+  
+  <table>
+  <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Numero de Tele</th>
+        
+        <th colspan="3"></th>
+      </tr>
+  </thead>
+  <% if @event.customers %>
+    <% @event.customers.each do |customer| %>
+      <tr>
+        <td><%= link_to "#{customer.id}", customer%></td>
+        <td><%= link_to "#{customer.name}", customer%></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.phone %></td>
+      </tr>
+    <%end%>
+  <%end%>
+
+<div class="auxlinks">
+  <br>
+   <%= link_to 'Add Customer', add_event_path(@event) %>
+
+
 </div>
- <td><%= link_to 'Add Customer', add_event_path(@event) %><br>
-  <%= link_to "delete event", @event, method: :delete,
-  data: { confirm: "Are you sure you want to delete #{@event.name}?" } %>

@@ -1,9 +1,9 @@
  <%= render 'application/header' %>
-<h1> Welcome <%= @user.name %></h1>
-  <%# <%= link_to "delete", @user, method: :delete,
-                                       data: { confirm: "You sure?" } %>
 
+<div class = "pagehead">
+  <h1> Welcome <%= @user.name %></h1>
+</div>
+  <%= render 'upcoming' %>
 
-<%= render 'events/upcoming' %>
 
 
