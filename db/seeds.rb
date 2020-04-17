@@ -11,19 +11,15 @@ User.create!(name:"Test admin",
             password: "password",
             password_confirmation: "password")
 
-locations = %w[
-  NewYork Guangzhou RiodeJaneiro Tianjin Manila
+locations = %w[NewYork Guangzhou RiodeJaneiro Tianjin Manila
   Lagos Kolkata Istanbul BuenosAires Chongqing
   Karachi Osaka Beijing Mumbai Dhaka
-  Cairo MexicoCity SaoPaulo Shanghai Delhi
-]
+  Cairo MexicoCity SaoPaulo Shanghai Delhi]
 
-mexicanNames = %w[
-  Jose Luis Juan Miguel Angel Fransicso Antonio Alejandro Lupita Diego Roberto Maria Elena Rosa Rosamaria Gabriela Margarita Veronica Josefina
-]
+mexicanNames = %w[Jose Luis Juan Miguel Angel Fransicso Antonio Alejandro Lupita Diego Roberto Maria Elena Rosa Rosamaria Gabriela Margarita Veronica Josefina]
 
 
-30.times do |n| 
+8.times do |n| 
   cFirst = mexicanNames[rand(0..mexicanNames.length)]
   cMiddle = mexicanNames[rand(0..mexicanNames.length)]
   cLast = mexicanNames[rand(0..mexicanNames.length)]
@@ -36,7 +32,7 @@ mexicanNames = %w[
 end
 
 
-30.times do |n|  
+10.times do |n|  
   eloc = locations[rand(0..locations.length)]
   name = "#{eloc} Event #{n+1}"
   datetime = DateTime.now + (rand(1..20)-9).day + (rand(1..20)-9).month
@@ -50,17 +46,17 @@ end
 end
 
 
-customers = Customer.all
+# customers = Customer.all
 
-events = Event.all
-events.each do |event|
-  addcus = []
-  20.times do
-    addcus.append(customers[rand(0..29)])
-  end
-  event.customers = addcus
-  event.save
-end
+# events = Event.all
+# events.each do |event|
+#   addcus = []
+#   5.times do
+#     addcus.append(customers[rand(1..7)])
+#   end
+#   event.customers = addcus
+#   event.save
+# end
 
 
 

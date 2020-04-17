@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   
-  has_many :customerevents, class_name: 'CustomerEvent'
+  has_many :customerevents, class_name: 'CustomerEvent', dependent: :delete_all
   has_many :customers, through: :customerevents
 
 
