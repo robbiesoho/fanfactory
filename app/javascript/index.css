@@ -1,0 +1,90 @@
+.container-home {
+  background-color: white;
+}
+
+.background {
+  height: 100%; 
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  overflow:hidden; 
+  z-index:0;
+
+
+}
+
+.background::before {
+
+background: url('/assets/fanfactory.jpg');
+content: "";
+position: absolute;
+z-index: -1;
+/* 141% ~ sqrt(2)x100% to make sure to cover all the area after the rotation */
+width: 141%;
+height:141%;
+/**/
+/* to center*/
+left: 50%;
+top: 50%;
+/* */
+background-size: 100px 100px; /* size of the image*/
+transform:translate(-50%,-50%) rotate(45deg); /* center the element then rotate */
+opacity: 0.1;
+
+}
+#hero-img {
+  height: 250px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-radius:20%;
+  padding: 20px;
+
+}
+
+.navbar  {
+position: relative;
+height: 50px;
+width: 100%;
+background-color: black;
+
+
+padding: 5px 20px;
+
+display:flex;
+justify-content: space-between;
+align-content: center;
+
+
+}
+
+.navbar ul  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar li {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+text-decoration: none;
+float: left;
+color: black;
+text-align: center;
+padding: 10px 10px;
+text-decoration: none;
+font-size: 17px;
+
+}
+
+.navbar li:hover {
+
+  text-decoration: underline;
+
+}
+
+section {
+height:300px;
+width: 100%;
+}

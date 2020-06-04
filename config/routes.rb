@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
   get 'users/new'
-  root 'sessions#new'
+  root 'static#index'
   get  '/help', to: 'static#help'
   get  '/events', to: 'events#index'
   get  '/events/new', to: 'events#new'
@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get 'users', to: 'users#index'
+
+  get 'getevents', to: 'events#get_events'
   
   
   resources :admins
@@ -22,6 +24,14 @@ Rails.application.routes.draw do
   resources :events do
     get  'addcustomer', on: :member, as: 'add'
   end
+
+  # namespace :v1, defaults: { format: 'json' } do
+  #   get 'things', to: 'things#index'
+  # end
+
+  # get '*page', to: 'static#index', constraints: ->(req) do
+  #   !req.xhr? && req.format.html?
+  # end
   
   
 end

@@ -1,9 +1,7 @@
 class Event < ApplicationRecord
-  
+  has_one_attached :image
   has_many :customerevents, class_name: 'CustomerEvent', dependent: :delete_all
   has_many :customers, through: :customerevents
-
-
 
   default_scope { order("datetime DESC") }
   scope :upcoming, -> {where("datetime >= ?",DateTime.now)}

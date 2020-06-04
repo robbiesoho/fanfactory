@@ -1,12 +1,16 @@
 class EventsController < ApplicationController
-  before_action :logged_in_user
-  
+  # before_action :logged_in_user
 
+  def get_events
+    @events = Event.all
+    render json: { data: @events}
+  end
+  
   def index
+  
     @upcoming_events = Event.all.upcoming
     @previous_events = Event.all.previous
   end
-
 
   def show
     @event = Event.find(params[:id])
@@ -52,11 +56,10 @@ class EventsController < ApplicationController
     redirect_to events_url
   end
 
-
   private
 
   def event_params
-    params.require(:event).permit(:name, :datetime, :location, :tickets, :price, customer_ids:[])
+    params.require(:event).permit(:image, :name, :datetime, :location, :tickets, :price, customer_ids:[])
   end
  
 end
