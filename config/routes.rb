@@ -14,7 +14,10 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   get 'users', to: 'users#index'
 
+  get '/user/show', to: 'users#show'
+
   get 'getevents', to: 'events#get_events'
+
   
   
   resources :admins

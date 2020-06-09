@@ -1,13 +1,18 @@
 class EventsController < ApplicationController
-  # before_action :logged_in_user
+  before_action :logged_in_user, except: :get_events
 
   def get_events
-    @events = Event.all
-    render json: { data: @events}
+    # @events = Event.all
+    # images = @events.map {|i| rails_blob_path(i.image)}
+    # render json: { data: @events, images: images}
+
+    @events = Event.all.map { |e| e.attributes.merge(image: rails_blob_path(e.image)) }
+    render json: { data: @events }
+
   end
-  
+
   def index
-  
+    @events = Event.all
     @upcoming_events = Event.all.upcoming
     @previous_events = Event.all.previous
   end
@@ -35,9 +40,9 @@ class EventsController < ApplicationController
     @customer = Customer.all
   end
 
-  # def edit
-  #   @user = User.find(params[:id])
-  # end
+  def edit
+    @event = Event.find(params[:id])
+  end
 
   def update
     @event = Event.find(params[:id])

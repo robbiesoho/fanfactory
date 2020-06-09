@@ -4,7 +4,6 @@
 <div class="pagehead">
 <h1>New Admin User</h1>
   <%= form_for(@user, url: signup_path) do |f| %>
-    <%# <%= render 'shared/error_messages' %>
 
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %><br>

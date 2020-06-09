@@ -9,8 +9,9 @@ class Table extends React.Component {
   }
 
   render () {
+
       const items = this.props.events.map( (data) => {
-      return <Item key= {data.id} name ={data.name} location={data.location} />  
+      return <Item key= {data.id} name ={data.name} location={data.location} image={data.image}/>  
 
     })
     return (

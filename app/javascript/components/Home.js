@@ -12,21 +12,23 @@ class Home extends React.Component {
 
     this.state = {
       events: [
+
       ]
     }
   }
 
+ 
   componentDidMount(){
     axios.get('/getevents.json')
     .then(data => {
- 
       let res = []
       data.data.data.map( (data) => {
-        res.push({id: data.id, name: data.name, location: data.location})
-
+        res.push({id: data.id, name: data.name, location: data.location, image: data.image})
+      
         this.setState({events: res})
       })
 
+     
       
     })
     .catch(data => {
@@ -34,7 +36,12 @@ class Home extends React.Component {
     })
   }
 
+
+
+
+
   render () {
+    
     return (
       
     <React.Fragment>

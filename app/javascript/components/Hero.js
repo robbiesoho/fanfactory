@@ -7,6 +7,7 @@ class Hero extends React.Component {
         <div>
           <img id="hero-img" src="./assets/fanfactory.jpg" />
         </div>
+        <a className="admin-login" href="http://localhost:3000/login">Admin Login</a>
       </React.Fragment>
     );
   }

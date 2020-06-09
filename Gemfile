@@ -8,6 +8,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 
 gem 'bcrypt', '3.1.12'
 gem 'pg', '>= 0.18', '< 2.0'
+gem 'active_model_serializers'
 
 gem 'react-rails' 
 # Use Puma as the app server

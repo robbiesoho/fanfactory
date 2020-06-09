@@ -4,21 +4,29 @@ import Header from './Header'
 import axios from 'axios'
 
 class Events extends React.Component {
+  constructor(){
+    super()
+
+    this.state = {
+      events: [
+      ]
+    }
+  }
   
   
   componentDidMount(){
-    axios.get('/firstevent.json')
+    axios.get('/getimages.json')
     .then(data => {
-      
-       res.push(data.data.data.name)
-
-       this.setState({module: res})
+      let res = []
+      res.push(data.data.image)
+      this.setState({events: res})
     })
     .catch(data => {
    
     })
   }
-  
+
+ 
   render () {
     return (
       <React.Fragment>
@@ -26,6 +34,7 @@ class Events extends React.Component {
         <div className="background">
           <p>Events</p>
           <Header />
+          <img src={`http://localhost:3000/${this.state}`}></img>
         </div>
       </div>
       </React.Fragment>

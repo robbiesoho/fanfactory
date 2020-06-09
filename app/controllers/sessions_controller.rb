@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  # before_action :logged_in_user, except: [:new]
+  before_action :logged_in_user, except: [:new, :create]
 
   def new
   end
@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to user
     else
+      puts('nope')
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end

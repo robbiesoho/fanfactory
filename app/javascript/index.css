@@ -88,3 +88,33 @@ section {
 height:300px;
 width: 100%;
 }
+
+.admin-login {
+  background-color: lightblue;
+  line-height: 12px;
+  width: 150px;
+  height: 30px;
+  font-size: 8pt;
+  font-family: tahoma;
+  margin-top: 1px;
+  margin-right: 2px;
+  position:absolute;
+  top:0;
+  right:0;
+  opacity: 0;
+
+  
+  border: solid 3px black
+  
+}
+
+
+.admin-login:hover {
+  color:black;
+  margin: auto;
+  text-align: center;
+  opacity: 1;
+  text-decoration: none;
+  font: 5vh;
+
+}

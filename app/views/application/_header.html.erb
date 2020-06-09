@@ -1,37 +1,35 @@
-<% if logged_in? %>
-<%# <nav role="navigation" class="navbar"> %>
-<div class= "navbar">
-<ul>
-  <li><%= link_to "Home", current_user %></li>
 
-  <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Events</a>
-    <ul class="dropdown" aria-label="submenu">
-      <li><%= link_to "All Events", events_path%></li>
-      <li><%= link_to "New Event", new_event_path%></li>
-    </ul>
-  </li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= image_tag "fanfactory.jpg", class: "img-thumbnail" %>
+  <%# <p class="navbar-msg"> Logged in as <%= @user.name %>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Events
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <%= link_to "New Event", {controller: "events", action: "new"}, class:"dropdown-item"  %>
+      <%= link_to "All Events", {controller: "events", action: "index"}, class:"dropdown-item"  %>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Customers
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <%= link_to "New Customer", {controller: "customers", action: "new"}, class:"dropdown-item"  %>
+      <%= link_to "All Customers", {controller: "customers", action: "index"}, class:"dropdown-item"  %>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Admin
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <%= link_to "New Admin User", {controller: "users", action: "new"}, class:"dropdown-item"  %>
+      <%= link_to "View/Edit Admins", {controller: "users", action: "index"}, class:"dropdown-item"  %>
+    </div>
+  </div>
+  <%= link_to "Log out", logout_path, method: "delete" %>
 
-  <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Customers</a>
-    <ul class="dropdown" aria-label="submenu">
-      <li><%= link_to "All Customers", customers_path%></li>
-      <li><%= link_to "New Customer", new_customer_path%></li>
-    </ul>
-  </li>
+</nav>
 
-  <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin</a>
-    <ul class="dropdown">
-      <li><%= link_to "All Admin", users_path%></li>
-      <li><%= link_to "Create New Admin", new_user_path%></li>
-    </ul>
-  </li>
-
-  <li><%= link_to "Help", help_path %>
-  </li>
-
-  <li>
-    <%= link_to "Log out", logout_path, method: :delete %>
-  </li>
-</ul>
-</div>
-<%# </nav> %>
-<% end %>

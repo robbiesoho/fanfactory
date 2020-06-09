@@ -131,7 +131,7 @@ table {
 }
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: rgb(237, 253, 239);
+  background-color: rgb(253, 253, 237);
 }
 
 h1,
@@ -170,13 +170,9 @@ table, th, td {
 
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 80%; /* Full width */
-  
+.navbar ul {
+  display: flex;
+  justify-content: left;
 }
 
 .navbar a {
@@ -184,7 +180,7 @@ table, th, td {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  // padding: 14px 16px;
+  padding: 14px 16px;
   text-decoration: none;
   font-weight: 1000;
 }
@@ -192,60 +188,34 @@ table, th, td {
 .navbar a:hover {
   background: #ddd;
   color: black;
+  cursor: pointer;
   
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    
+.navbar-msg {
+  color: #f2f2f2;
+}
+.img-thumbnail {
+  height: 50px;
+  width: auto;
 }
 
-li {
-
-    display: block;
-    float: left;
-    padding: 1rem;
-    
-}  
-li a {
-  color: #fff;
-  font-weight: 1000
- 
+.dropdown-menu {
+  background-color:  #6c757d;;
 }
 
-ul li ul {
-
-    visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-    position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-    left: 0;
-  display: none;
-  font-weight: 1000;
-  
+.event-img {
+  height: 150px;
+  width: auto;
 }
 
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover,
-ul li ul:focus {
-   visibility: visible;
-   opacity: 1;
-   display: block;
-   font-weight: 1000;
-  
-  
+.show-event-title{
+  font-size: 10vh;
+  text-align: center;
 }
 
-ul li ul li {
-  clear: both;
-  width: 100%;
-  font-weight: 1000;
-  
-
+.event-page-customer-show {
+  width:80%; 
+  margin-left:10%; 
+  margin-right:10%;
 }
-
