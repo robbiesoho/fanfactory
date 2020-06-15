@@ -17,7 +17,7 @@ class Navbar extends React.Component {
       <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-dark">
         <div className="container">
-          <li className="btn btn-default btn-lg btn-light"><Link to="/">Casa</Link></li>
+          <li className="navbar-brand"><Link to="/">Casa</Link></li>
           <li className="navbar-brand"><Link to="/eventpage">Eventos</Link></li>
           <li className="navbar-brand"><Link to="/contactpage">Contactos</Link></li>
         </div>

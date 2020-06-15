@@ -16,7 +16,8 @@ Rails.application.routes.draw do
 
   get '/user/show', to: 'users#show'
 
-  get 'getevents', to: 'events#get_events'
+  get 'getupcomingevents', to: 'events#get_upcoming_events'
+  get 'getpastevents', to: 'events#get_past_events'
 
   
   

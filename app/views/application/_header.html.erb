@@ -1,7 +1,12 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <%= image_tag "fanfactory.jpg", class: "img-thumbnail" %>
-  <%# <p class="navbar-msg"> Logged in as <%= @user.name %>
+  <%# <%= image_tag "fanfactory.jpg", class: "img-thumbnail" %>
+  <%= link_to image_tag("fanfactory.jpg", class: "img-thumbnail", height: "50px"), root_path %> 
+  <%# <button class="btn btn-secondary" type="button" id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">
+    Home
+  </button> %>
+  <%# <%= link_to "Home", user_path, class: "btn btn-secondary" %>
+
+
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Events
@@ -30,6 +35,5 @@
     </div>
   </div>
   <%= link_to "Log out", logout_path, method: "delete" %>
-
 </nav>
 

@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to root_url
+    redirect_to login_url
   end
 
   # Returns true if the given user is the current user.

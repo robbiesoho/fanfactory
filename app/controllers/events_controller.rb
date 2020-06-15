@@ -1,12 +1,14 @@
 class EventsController < ApplicationController
-  before_action :logged_in_user, except: :get_events
+  before_action :logged_in_user, except: [:get_upcoming_events, :get_past_events]
 
-  def get_events
-    # @events = Event.all
-    # images = @events.map {|i| rails_blob_path(i.image)}
-    # render json: { data: @events, images: images}
+  def get_upcoming_events
+    @events = Event.all.upcoming.map { |e| e.attributes.merge(image: rails_blob_path(e.image), date: e.date_formatted, time: e.time_formatted)}
+    render json: { data: @events }
 
-    @events = Event.all.map { |e| e.attributes.merge(image: rails_blob_path(e.image)) }
+  end
+
+  def get_past_events
+    @events = Event.all.previous.map { |e| e.attributes.merge(image: rails_blob_path(e.image), date: e.date_formatted, time: e.time_formatted)}
     render json: { data: @events }
 
   end

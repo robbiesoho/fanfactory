@@ -8,16 +8,24 @@ class Event < ApplicationRecord
   scope :previous, -> {where("datetime < ?",DateTime.now)}
 
   def date_formatted
-    self.datetime.strftime("%d/%m/%Y")
+    if self.datetime
+      self.datetime.strftime("%d/%m/%Y")
+    else
+      self.datetime = DateTime.now.strftime("%d/%m/%Y")
+    end
   end
 
   def time_formatted
-    self.datetime.strftime("%l:%M %P")
+    if self.datetime
+      self.datetime.strftime("%l:%M %P")
+    else
+      self.datetime = DateTime.now.strftime("%l:%M %P")
+    end
   end
 
   def available_tickets
     if self.customers != nil
-      self.tickets.to_i - self.customers.count
+      self.tickets.to_i - self.customers.counts
     end
   end
 
