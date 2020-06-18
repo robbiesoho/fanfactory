@@ -162,9 +162,9 @@ h1 {
 
 // navbar 
 
-.navbar ul {
+.nav {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
 }
 
 .navbar a {
@@ -240,7 +240,8 @@ h1 {
   background-color: initial;
 }
 
+// Dont know why I need to put this here but i do
 .react-body {
-  margin-left: -100px;
-  margin-right: -100px;
+  margin-left: -200px;
+  margin-right: -200px;
 }

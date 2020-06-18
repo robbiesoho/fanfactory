@@ -1,13 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Navbar from './Navbar'
+import Footer from './Footer'
 import Table from './Table/Table'
 import axios from 'axios'
 
-// import "../index.css";
-
-
-class Events extends React.Component {
+class PastEvents extends React.Component {
   constructor(){
     super()
     this.state = {
@@ -18,7 +16,7 @@ class Events extends React.Component {
   }
 
   componentDidMount(){
-    axios.get('/getupcomingevents.json')
+    axios.get('/getpastevents.json')
     .then(data => {
       let res = []
       data.data.data.map( (data) => {
@@ -33,22 +31,22 @@ class Events extends React.Component {
   render () {
     return (
     <React.Fragment>
-    <div className="react-body">
-      <div className='container-home'>
-        <div className="react-background">
+     <div className="text-center">
           <header>
             <Navbar /> 
-            <div className="text-center">
-            <h2 className="pt-4 pb-4 react-words">Próximos Eventos</h2>
-            </div>
-            <Table events={this.state.events}/>
+              <h2 className="pt-5 pb-4 events-title">Eventos Pasados</h2>
           </header>
         </div>
+
+      <div className="react-background-events">
+        <Table events={this.state.events}/>
       </div>
-    </div>
+        
+      
+      <Footer />
     </React.Fragment>
     );
   }
 }
 
-export default Events
+export default PastEvents

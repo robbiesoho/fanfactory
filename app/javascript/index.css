@@ -1,139 +1,5 @@
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
- 
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.container-home {
-  background-color: white;
-}
-
+/* background with tilted logo */
 .react-background {
   height: 100%; 
   width: 100%;
@@ -141,6 +7,8 @@ table {
   display: inline-block;
   overflow:hidden; 
   z-index:0;
+  
+ 
 }
 
 .react-background::before {
@@ -152,31 +20,21 @@ z-index: -1;
 /* width: 141%;
 height:141%; */
 width: 200%;
-height:200%;
+height:300%;
 /**/
 /* to center*/
-left: 50%;
+left: 25%;
 top: 50%;
 /* */
 background-size: 100px 100px; /* size of the image*/
 transform:translate(-50%,-50%) rotate(45deg); /* center the element then rotate */
 opacity: 0.1;
 
+
 } 
 
-#hero-img {
-  height: auto;
-  width: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  border-radius:20%;
-  padding: 20px;
-
-}
-
-.navbar  {
+/* navbar */
+.navbar {
   position: relative;
   height: 50px;
   width: 100%;
@@ -212,96 +70,145 @@ opacity: 0.1;
 
 }
 
-section {
+/* end navbar */
+
+/* section {
   height:300px;
   width: 100%;
-}
-
-.admin-login {
-  background-color: lightblue;
-  line-height: 12px;
-  width: 150px;
-  height: 30px;
-  font-size: 8pt;
-  font-family: tahoma;
-  margin-top: 1px;
-  margin-right: 2px;
-  position:absolute;
-  top:0;
-  right:0;
-  opacity: 0;
-
-  
-  border: solid 3px black
-  
-}
-
-.admin-login:hover {
-  color:black;
-  margin: auto;
-  text-align: center;
-  opacity: 1;
-  text-decoration: none;
-  font: 5vh;
-
-}
-
-/* Home page */
-#home-hero-img {
-  height: auto;
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  border-radius:30%;
-  padding: 20px;
-}
-
-.home-container-home {
-  width:100%;
-}
-
-.home-top-nav {
-  height: 30px;
-  width: 100%;
-  background-color: lightcoral;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: content-box;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
-
-
-}
-
-.container-thumbnail {
-  margin-top: 10px;
-height: 200px;
-width: auto;
-overflow: hidden;
-}
-
-
-/* .img-responsive {
- background-size: 100%;
- 
-}
-
-.event-thumbnail {
-  background-size: 100%;
-  
 } */
 
+/* Home page */
+#react-hero-img {
+  position: relative;
+  margin-top: 3%;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius:20%;
+  max-width: 25%;
+  min-width: 450px;
+  width: auto;
+  
 
-/* Event page */
+}
+
+.home-container {
+  width:140%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom:0px;
+  
+}
+
+/* Upcoming Event page */
 .events-title {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 00;
+  font-size: 8vh;
+  margin-top: 20px;
+  background-color: whitesmoke;
+  
 }
+
+.row {
+  justify-content: center;
+}
+
+.react-background-events::before {
+background: url('/assets/fanfactory.jpg');
+content: "";
+position: absolute;
+z-index: -3;
+/* 141% ~ sqrt(2)x100% to make sure to cover all the area after the rotation */
+/* width: 141%;
+height:141%; */
+width: 500%;
+height:400%;
+/**/
+/* to center*/
+left: 50%;
+
+top: 100%;
+/* */
+background-size: 100px 100px; /* size of the image*/
+transform:translate(-50%,-50%) rotate(45deg); /* center the element then rotate */
+opacity: 0.1;
+
+} 
+
+
+
+
+/* footer */
+.footer-text {
+  color: white !important;
+
+}
+
+.footer-container {
+  position: fixed;
+  display: flex;
+  right:-10px;
+  
+  height: 100px;
+}
+
+.non-hov {
+  text-decoration: none !important;
+}
+
+/* Contact page */
+.contact-container {
+  width:100%;
+  height: 100%; 
+  position: fixed;
+  bottom:0px;
+}
+
+.fb-img{
+  position: relative;
+  width: 50px
+}
+
+.card-contact li {
+ margin: 5px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .footer-text {
+    display:none !important;
+  
+  }
+
+  .footer-link {
+    display: block !important;
+    margin-left: 33%;
+    
+  }
+ 
+}
+
+
+@media only screen and (max-width: 640px) {
+ 
+ 
+  .navbar {
+    flex-wrap: wrap !important;
+    height: 20% !important;
+    
+  }
+
+  .navbar-brand {
+    align-self: center;
+    margin: auto
+  }
+
+  #react-5o-img {
+  margin-top: 15%;
+  height: 400px;
+
+  
+  }
+
+}
+

@@ -16,8 +16,6 @@
     </thead>
 
   <% @upcoming_events.each do |event| %>
-  <%# <% @events.each do |event| %> %>
-
     <tr>
       <td><%= link_to "#{event.name}", event%></td>
       <% if event.datetime %>
