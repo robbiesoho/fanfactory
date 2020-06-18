@@ -72,11 +72,6 @@ opacity: 0.1;
 
 /* end navbar */
 
-/* section {
-  height:300px;
-  width: 100%;
-} */
-
 /* Home page */
 #react-hero-img {
   position: relative;
@@ -114,6 +109,25 @@ opacity: 0.1;
   justify-content: center;
 }
 
+.container-thumbnail {
+
+  
+  
+}
+
+.event-thumbnail {
+
+  width: auto;
+  height: 200px;
+  object-fit: scale-down;
+
+ 
+  
+  
+}
+
+
+
 .react-background-events::before {
 background: url('/assets/fanfactory.jpg');
 content: "";
@@ -122,7 +136,7 @@ z-index: -3;
 /* 141% ~ sqrt(2)x100% to make sure to cover all the area after the rotation */
 /* width: 141%;
 height:141%; */
-width: 500%;
+width: 400%;
 height:400%;
 /**/
 /* to center*/
@@ -163,6 +177,7 @@ opacity: 0.1;
   height: 100%; 
   position: fixed;
   bottom:0px;
+  margin-left: -10%;
 }
 
 .fb-img{

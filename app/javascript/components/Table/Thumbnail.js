@@ -5,7 +5,8 @@ const Thumbnail = (props) => {
 
   return(
     <div className="container-thumbnail">
-      <iframe className="event-thumbnail" width="auto" height="200px" src={`http://localhost:3000/${props.image}`}></iframe>
+      {/* <iframe className="event-thumbnail" src={`http://localhost:3000/${props.image}`}></iframe> */}
+      <img className="event-thumbnail" src={`http://localhost:3000/${props.image}`}></img>
     </div>
   )
 }
