@@ -21,9 +21,9 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={UpcomingEvents}/>
+          {/* <Route exact path="/" component={UpcomingEvents}/> */}
 
-          {/* <Route exact path="/" component={Home}/> */}
+          <Route exact path="/" component={Home}/>
           <Route path="/eventpage" component={UpcomingEvents}/>
           <Route path="/pasteventspage" component={PastEvents}/>
           <Route path="/contactpage" component={Contact}/>
