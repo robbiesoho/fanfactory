@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(name:"Test admin", 
-            email:"test@test.com", 
-            password: "password",
-            password_confirmation: "password")
+            email:"rob@rob.com", 
+            password: "robman",
+            password_confirmation: "robman")
 
 locations = %w[NewYork Guangzhou RiodeJaneiro Tianjin Manila
   Lagos Kolkata Istanbul BuenosAires Chongqing
