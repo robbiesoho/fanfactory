@@ -13,6 +13,7 @@
 
 .react-background::before {
 background: url('/assets/fanfactory.jpg');
+/* background: url('fanfactory.jpg'); */
 content: "";
 position: absolute;
 z-index: -1;
