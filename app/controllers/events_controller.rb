@@ -29,6 +29,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    # byebug
     if @event.save
       flash[:success] = "Event added!"
       redirect_to events_url
