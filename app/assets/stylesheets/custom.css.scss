@@ -443,7 +443,10 @@ opacity: 0.1;
  margin: 5px;
 }
 
-@media only screen and (max-width: 1050px) {
+
+
+@media only screen and (max-width: 640px) {
+ 
   .footer-text {
     display:none !important;
   
@@ -451,14 +454,9 @@ opacity: 0.1;
 
   .footer-link {
     display: block !important;
-    margin-left: 33%;
+
     
   }
- 
-}
-
-
-@media only screen and (max-width: 640px) {
  
  
   .navbar {
@@ -472,9 +470,11 @@ opacity: 0.1;
     margin: auto
   }
 
-  #react-5o-img {
-  margin-top: 15%;
-  height: 400px;
+  #react-hero-img {
+  margin-top: 25%;
+  height: 300px;
+  width: auto;
+
 
   
   }
