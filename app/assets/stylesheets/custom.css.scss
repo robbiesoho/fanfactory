@@ -160,14 +160,21 @@ h1 {
   font-size: 4vh;
 }
 
-// Everything from here on is for the React front end
+// This is for the Admin UI navbar. The !important marks
+// are there because there is REACT/Rails and bootstrap
+// styles and I can;t get it to work otherwise
 
 .dropdown-menu {
   background-color:  #6c757d ;
 }
 
 .dropdown-item {
-  background-color:  #6c757d ;
+  background-color:  #6c757d !important;
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: whitesmoke !important;
   color: black ;
 }
 
@@ -200,10 +207,11 @@ h1 {
 
 .img-thumbnail {
   max-height: 50px;
- 
   width: auto;
 }
 
+
+// Everything from here on is for the React front end
 
 
 
