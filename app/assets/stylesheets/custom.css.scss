@@ -1,5 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap';
-
+@import "bootstrap/scss/bootstrap.scss";
 
 html,
 body,
@@ -325,7 +325,7 @@ opacity: 0.1;
 /* Home page */
 #react-hero-img {
   position: relative;
-  margin-top: 3%;
+  margin-top: 5%;
   margin-left: 25%;
   margin-right: 25%;
   border-radius:20%;
