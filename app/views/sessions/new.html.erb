@@ -7,10 +7,10 @@
       <%= form_for(:session, url: login_path) do |f| %>
       <div class="login-form">
         <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control login-field' %><br>
+        <%= f.email_field :email, class: 'login-field' %><br>
 
         <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control login-field' %>
+        <%= f.password_field :password, class: 'login-field' %>
       <div>
 
         <%= f.submit "Log in", class: "btn btn-primary" %>

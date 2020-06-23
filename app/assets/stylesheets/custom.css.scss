@@ -289,8 +289,7 @@ opacity: 0.1;
   height: 50px;
   width: 100%;
   background-color: black;
-  // padding: 5px 20px;
-  // padding: 5px;
+
   display:flex;
   justify-content: space-between;
   align-content: center;
@@ -409,6 +408,7 @@ opacity: 0.1;
 }
 
 .footer-container {
+
   position: fixed;
   display: flex;
   right:-10px;
@@ -451,10 +451,9 @@ opacity: 0.1;
   .footer-link {
     display: block !important;
 
-    
   }
  
- 
+
   .navbar {
     flex-wrap: wrap !important;
     height: 20% !important;
@@ -470,39 +469,6 @@ opacity: 0.1;
   margin-top: 25%;
   height: 300px;
   width: auto;
-
-
-  
   }
 
-}
-
-.login-container{
-  margin-top: 70px;
-  margin-left: 5%;
-  // height: 100%;
-  // width:60%;
-  position: fixed;
-}
-
-#rails-hero-img {
-  height: auto;
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  border-radius:20%;
-  padding: 20px;
-
-}
-
-#home-link {
-  margin-top: 0;
-  margin-right: 0;
-}
-
-.login-field {
-  width: 50%;
-  margin: auto;
 }
