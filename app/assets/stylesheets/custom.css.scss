@@ -162,9 +162,18 @@ h1 {
 
 // Everything from here on is for the React front end
 
+.dropdown-menu {
+  background-color:  #6c757d ;
+}
+
+.dropdown-item {
+  background-color:  #6c757d ;
+  color: black ;
+}
+
 .nav {
-  display: flex;
-  justify-content: space-between;
+  display: flex !important ;
+  justify-content: space-between !important;
 }
 
 .navbar a {
@@ -196,14 +205,7 @@ h1 {
 }
 
 
-.dropdown-menu {
-  background-color:  #6c757d !important;
-}
 
-.dropdown-item {
-  background-color:  #6c757d !important;
-  color: black !important;
-}
 
 .background {
   height: 100%; 
@@ -286,7 +288,7 @@ opacity: 0.1;
 /* navbar */
 .navbar {
   position: relative;
-  height: 50px;
+  height: 50px !important;
   width: 100%;
   background-color: black;
 
