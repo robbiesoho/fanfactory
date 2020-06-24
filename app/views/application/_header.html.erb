@@ -2,20 +2,20 @@
   <%= link_to image_tag("fanfactory.jpg", class: "img-thumbnail", height: "50px"), root_path %> 
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Events
+      Eventos
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <%= link_to "New Event", {controller: "events", action: "new"}, class:"dropdown-item"  %>
-      <%= link_to "All Events", {controller: "events", action: "index"}, class:"dropdown-item"  %>
+      <%= link_to "Nuevo Evento", {controller: "events", action: "new"}, class:"dropdown-item"  %>
+      <%= link_to "Todos Los Eventos", {controller: "events", action: "index"}, class:"dropdown-item"  %>
     </div>
   </div>
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Customers
+      Clientes
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <%= link_to "New Customer", {controller: "customers", action: "new"}, class:"dropdown-item"  %>
-      <%= link_to "All Customers", {controller: "customers", action: "index"}, class:"dropdown-item"  %>
+    <%= link_to "Nuevo Cliente", {controller: "customers", action: "new"}, class:"dropdown-item"  %>
+      <%= link_to "Todos Los Clientes", {controller: "customers", action: "index"}, class:"dropdown-item"  %>
     </div>
   </div>
   <div class="dropdown">
@@ -23,10 +23,10 @@
       Admin
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <%= link_to "New Admin User", {controller: "users", action: "new"}, class:"dropdown-item"  %>
-      <%= link_to "View/Edit Admins", {controller: "users", action: "index"}, class:"dropdown-item"  %>
+      <%= link_to "Nuevo Admin", {controller: "users", action: "new"}, class:"dropdown-item"  %>
+      <%= link_to "Ver/Editar Admins", {controller: "users", action: "index"}, class:"dropdown-item"  %>
     </div>
   </div>
-  <%= link_to "Log out", logout_path, method: "delete" %>
+  <%= link_to "Cerrar Sesión", logout_path, method: "delete" %>
 </nav>
 
