@@ -5,7 +5,7 @@ const Thumbnail = (props) => {
 
   return(
     <div className="container-thumbnail">
-      <img className="event-thumbnail" src={`http://localhost:3000/${props.image}`}></img>
+      <img className="event-thumbnail" src={`https://shielded-tundra-98304.herokuapp.com/${props.image}`}></img>
     </div>
   )
 }
