@@ -11,6 +11,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'active_model_serializers'
 gem 'active_storage_validations'
 gem "mini_magick"
+gem "aws-sdk-s3", require: false
 
 gem 'react-rails' 
 # Use Puma as the app server
