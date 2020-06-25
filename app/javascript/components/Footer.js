@@ -9,7 +9,7 @@ class Footer extends React.Component {
         <div className="container footer-container">
           <li className="navbar-brand footer-text non-hov">RPDEV Media</li>
           <li className="navbar-brand footer-text non-hov">Copyright {String.fromCharCode(169)} 2020 Allrights reserved</li>
-          <li className="navbar-brand footer-text footer-link"><a href="http://localhost:3000/login">Admins</a></li>
+          <li className="navbar-brand footer-text footer-link"><a href="http://www.fanfactory.xyz/login">Admins</a></li>
         </div>
       </nav>
       </React.Fragment>
