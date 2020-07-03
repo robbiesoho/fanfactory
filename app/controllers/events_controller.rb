@@ -29,7 +29,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    # byebug
     if @event.save
       flash[:success] = "Event added!"
       redirect_to events_url
@@ -49,7 +48,6 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    # debugger
     if @event.update_attributes(event_params)
       flash[:success] = "Event updated"
       redirect_to @event

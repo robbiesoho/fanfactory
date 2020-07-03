@@ -41,20 +41,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    #need to somehow implement this
     User.find(params[:id]).destroy
     flash[:success] = "Admin deleted"
     redirect_to users_url
   end
 
-
-  # Confirms the correct user.
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless @user == current_user
-  end
-
-  private
+ private
 
   def user_params
     params.require(:user).permit(:name, :email, :password,

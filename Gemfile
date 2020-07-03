@@ -13,6 +13,7 @@ gem 'active_storage_validations'
 gem "mini_magick"
 gem "aws-sdk-s3", require: false
 
+gem "figaro"
 gem 'react-rails' 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'

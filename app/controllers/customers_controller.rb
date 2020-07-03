@@ -29,7 +29,6 @@ class CustomersController < ApplicationController
 
   def update
     @customer = Customer.find(params[:id])
-    # debugger
     if @customer.update_attributes(customer_params)
       flash[:success] = "customer updated"
       redirect_to @customer
