@@ -162,7 +162,7 @@ h1 {
 
 // This is for the Admin UI navbar. The !important marks
 // are there because there is REACT/Rails and bootstrap
-// styles and I can;t get it to work otherwise
+// styles and I can't get it to work otherwise
 
 .dropdown-menu {
   background-color:  #6c757d !important;
@@ -236,20 +236,15 @@ h1 {
   content: "";
   position: absolute;
   z-index: -1;
-  /* 141% ~ sqrt(2)x100% to make sure to cover all the area after the rotation */
   width: 141%;
   height:141%;
-  /**/
-  /* to center*/
   left: 50%;
   top: 50%;
-  /* */
   background-size: 100px 100px; /* size of the image*/
   transform:translate(-50%,-50%) rotate(45deg); /* center the element then rotate */
   opacity: 0.1;
 
 }
-
 
 .navbar > a:hover{
   background-color: initial;
@@ -271,25 +266,17 @@ h1 {
   overflow:hidden; 
   z-index:0;
   
- 
 }
 
 .react-background::before {
 background: url('/assets/fanfactory.jpg');
-/* background: url('fanfactory.jpg'); */
 content: "";
 position: absolute;
 z-index: -1;
-/* 141% ~ sqrt(2)x100% to make sure to cover all the area after the rotation */
-/* width: 141%;
-height:141%; */
 width: 200%;
 height:300%;
-/**/
-/* to center*/
 left: 25%;
 top: 50%;
-/* */
 background-size: 100px 100px; /* size of the image*/
 transform:translate(-50%,-50%) rotate(45deg); /* center the element then rotate */
 opacity: 0.1;
@@ -303,12 +290,9 @@ opacity: 0.1;
   height: 50px !important;
   width: 100%;
   background-color: black;
-
   display:flex;
   justify-content: space-between;
   align-content: center;
-
-
 }
 
 .navbar ul  {
@@ -323,7 +307,6 @@ opacity: 0.1;
   float: left;
   color: black;
   text-align: center;
-  // padding: 10px 10px;
   font-size: 17px;
 
 }
@@ -374,65 +357,51 @@ opacity: 0.1;
 
 
 .event-thumbnail {
-
   width: auto;
   height: 200px;
   object-fit: scale-down;
-
- 
-  
   
 }
-
-
 
 .react-background-events::before {
 background: url('/assets/fanfactory.jpg');
 content: "";
 position: absolute;
 z-index: -3;
-/* 141% ~ sqrt(2)x100% to make sure to cover all the area after the rotation */
-/* width: 141%;
-height:141%; */
+
 width: 400%;
 height:400%;
-/**/
-/* to center*/
 left: 50%;
-
 top: 100%;
-/* */
 background-size: 100px 100px; /* size of the image*/
 transform:translate(-50%,-50%) rotate(45deg); /* center the element then rotate */
 opacity: 0.1;
 
 } 
 
-
-
-
 /* footer */
 
 .footer {
   padding-bottom: 0;
 }
-.footer-text {
-  color: white !important;
-
-}
 
 .footer-container {
   position: fixed;
-  display: flex;
   margin-bottom: 0;
   height: 100px;
+  
+  
+}
+.footer-text {
+  color: white !important;
+  text-align: center !important;
+
 }
 
 .non-hov {
   text-decoration: none !important;
 }
 
-/* Contact page */
 .contact-container {
   width:100%;
   height: 100%; 
@@ -452,7 +421,7 @@ opacity: 0.1;
 
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 500px) {
  
   .footer-text {
     display:none !important;
@@ -464,22 +433,17 @@ opacity: 0.1;
 
   }
  
-
   .navbar {
     flex-wrap: wrap !important;
     height: 20% !important;
     
   }
 
-  .navbar-brand {
-    align-self: center;
-    margin: auto
-  }
-
   #react-hero-img {
-  margin-top: 25%;
-  height: 300px;
+  margin-top: 20%;
+  height: 50vh;
   width: auto;
+ 
   }
 
 }
