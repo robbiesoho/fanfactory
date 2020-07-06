@@ -321,16 +321,17 @@ opacity: 0.1;
 /* Home page */
 #react-hero-img {
   position: relative;
-  margin-top: 3.5%;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-top: 10vh;
+  margin-left: 37vw;
+  margin-right: 2vw;
   border-radius:20%;
-  max-width: 25%;
+  max-width: 25vw;
   min-width: 450px;
   width: auto;
   
 
 }
+
 
 .home-container {
   width:140%;
@@ -421,7 +422,7 @@ opacity: 0.1;
 
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 635px) {
  
   .footer-text {
     display:none !important;
@@ -430,18 +431,24 @@ opacity: 0.1;
 
   .footer-link {
     display: block !important;
+    margin: auto;
 
   }
  
   .navbar {
+    position: absolute !important;
     flex-wrap: wrap !important;
-    height: 20% !important;
+    
+    
+    
     
   }
 
+
+
   #react-hero-img {
-  margin-top: 20%;
-  height: 50vh;
+  margin-top: 20vh;
+  height: 60vh;
   width: auto;
  
   }

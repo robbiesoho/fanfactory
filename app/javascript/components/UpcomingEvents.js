@@ -37,6 +37,7 @@ class UpcomingEvents extends React.Component {
           <Navbar /> 
           <h2 className="pt-5 pb-4 events-title">Próximos Eventos</h2>
         </header>
+        
       </div>
 
       <div className="react-background-events">
