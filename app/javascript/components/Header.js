@@ -1,20 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Hero from './Hero'
-import Navbar from './Navbar'
+import React from "react";
 
+import Navbar from "./Navbar";
 
 class Header extends React.Component {
-  render () {
+  render() {
     return (
       <React.Fragment>
-      <Navbar />
-      
-      
-        
+        <Navbar />
       </React.Fragment>
     );
   }
 }
 
-export default Header
+export default Header;

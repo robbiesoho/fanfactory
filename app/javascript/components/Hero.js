@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 class Hero extends React.Component {
-  render () {
+  render() {
     return (
       <React.Fragment>
         <div>
@@ -12,4 +12,4 @@ class Hero extends React.Component {
   }
 }
 
-export default Hero
+export default Hero;
