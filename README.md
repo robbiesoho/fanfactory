@@ -9,16 +9,8 @@ notable gems:
 * pg (1.2.3)
 * react-rails (2.6.1)
 * webpacker (4.2.2)
-* aws-eventstream (1.1.0)
-* aws-partitions (1.333.0)
-* aws-sdk-core (3.101.0)
-* aws-sdk-kms (1.35.0)
-* aws-sdk-s3 (1.70.0)
-* aws-sigv4 (1.2.0)
 * active_model_serializers (0.10.10)
 * active_storage_validations (0.8.9)
- 
- 
  
 instructions:
   * clone repo
@@ -27,8 +19,7 @@ instructions:
   * run yarn install
   * run rails db:migrate
   * run rails db:seed
-
-
+  
 known bugs:
   * No serverside rendering on React front end.
   * Bottom navbar items are skewed to the left side.
