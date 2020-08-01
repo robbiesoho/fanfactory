@@ -1,6 +1,6 @@
 Fan Factory
 
-This is a web app for an events management company in Mexico. There are two UIs. One is for customers of the buisness and the other is for the admistration. The admin UI is built with Ruby on Rails and the customer UI is built with React. Admins manage customers and events, upload events information and images and assign customers to events and vise versa.
+This is a web app for an events management company in Mexico. There are two UIs. One is for customers of the buisness and the other is for the admistration. The admin UI is built with Ruby on Rails and the customer UI is built with React. Admins manage customers and events, upload events information and images and assign customers to events and vise versa. The backend was made with ROR and PostgreSQL and deployed on heroku.
 
 notable gems:
 * rails (6.0.2.2)
